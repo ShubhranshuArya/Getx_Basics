@@ -56,12 +56,19 @@ class BasicScreen extends StatelessWidget {
                 onPressed: () async {
                   // off - to pop the top of stack and add
                   // offAll - to clear the stack and add
-                  var data = await Get.to(
-                    SecondScreen(),
-                    arguments: "First Data",
-                    // Animate the transition here.
-                  );
-                  print("data received - $data");
+// This is direct navigation.
+                  // Get.to(SecondScreen());
+
+// In this direct navigation we're sending and receiving data.
+                  // var data = await Get.to(
+                  //   SecondScreen(),
+                  //   arguments: "First Data",
+                  // Animate the transition here.
+                  // );
+                  // print("data received - $data");
+
+// This is navigation via named routes
+                  Get.toNamed('/second');
                 },
                 child: Text("Next Screen"),
               ),
